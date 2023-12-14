@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --lgray: #bababa;
+    --mgray: #8d8d8d;
+    --dgray: #3a3a3a;
+    --lblue: #a6cbeb;
+    --mblue: #4c96d7;
+    --dblue: #2677bd;
+    --logocolor: #4c96d7;
+    --darkergray: #282828;
+}
+* {
+    font-family: "Figtree", sans-serif;
+}
+:root {
+    @apply box-border;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    line-height: 1.15;
+}
+body {
+    @apply overflow-x-hidden;
+}
+li {
+    @apply list-none;
+}
+a {
+    @apply text-inherit font-['Figtree'];
+}
+h2 {
+    @apply text-[1.2rem];
+}
+table {
+    @apply w-full;
+}
+.dark-overlay-open {
+    @apply block;
+}
+.dark-overlay-close {
+    @apply hidden;
+}
+.slideout-menu-close {
+    @apply translate-x-[calc(100vw)] opacity-0;
+}
+.slideout-menu-open {
+    @apply block transition-transform duration-[0.5s,opacity] delay-[0.2s] translate-x-4 opacity-100;
+}
+.has-lcp {
+    @apply relative before:content-[""] before:absolute before:w-full before:h-full before:bg-[url("/images/site/LCP34Left.webp")] before:bg-cover before:bg-center before:brightness-[50%] before:z-[-9999] before:left-0 before:top-0;
+}
+.button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]:focus-visible {
+    @apply outline outline-2;
+}
+.button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #1d7484;
+    color: #f9f9f9;
+    border-radius: 1px;
+    border: 1px solid #1d7484;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=file]::file-selector-button[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+  .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
+    background-color: #982c61;
+    color: #f9f9f9;
+    outline: 0;
+  }
+  .button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]::file-selector-button:focus-visible {
+    outline-style: solid;
+    outline-width: 2px;
+  }
+  /*.has-has-main {
+    font-size: 0.7em;
+}
+
+.has-has-main * {
+    font-size: inherit;
+}*/
+  .has-main {
+    transform: scale(0.7);
+    transform-origin: center center;
+    margin-top: -15rem;
+    margin-bottom: -12rem;
+    font-size: 1.8rem;
+    line-height: 1.618;
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4a4a4a;
+    background-color: #f9f9f9;
+    padding: 13px;
+  }
+@media (min-width: 620px) {
+    .has-lcp {
+        @apply before:bg-[url("/images/site/LCPTop.webp")];
+    }
+    .slideout-menu-open {
+        @apply block transition-transform duration-[0.5s,opacity] delay-[0.2s] translate-x-[calc(100vw_-_10rem)] opacity-100;
+    }
+    .has-main {
+        margin-top: -13rem;
+    }
+}
+@media (min-width: 1100px ) {
+    .has-lcp {
+        @apply before:bg-[url("/images/site/2048LCP43Top.webp")];
+    }
+    .slideout-menu-open {
+        @apply block transition-transform duration-[0.5s,opacity] delay-[0.2s] translate-x-[calc(100vw_-50vw_+_25rem)] opacity-100;
+    }
+}

@@ -2,7 +2,7 @@
 
 Tailwindify is a web app built with Next.js that simplifies the process of converting CSS and HTML to HTML with Tailwind CSS.
 
-You can access it with this link: [still deploying]
+You can access it with this link: https://tailwindify-three.vercel.app/
 
 ## Features
 
